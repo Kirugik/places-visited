@@ -19,21 +19,48 @@
             <div class="col-md-6">
                 <h2>New Place Visited: </h2>
                 <form id="new-place">
+                    <!-- name of place -->
                     <div class="form-group">
                         <label for="new-place-visited">Name of Place:</label>
                         <input type="text" class="form-control" id="new-place-visited">
                     </div>
+                    <!-- location -->
                     <div class="form-group">
                         <label for="new-place-location">Location:</label>
                         <input type="text" class="form-control" id="new-place-location">
                     </div>
-        
-                    <button type="submit" class="btn">Add</button>
-                    </form>
-    
-            </div>
-        </div>
+                    <!-- time of the year -->
+                    <div class="form-group">
+                        <label for="time-of-the-year">Time of the Year:</label>
+                        <input type="text" class="form-control" id="time-of-year">
+                    </div>
+                    <!-- landmarks -->
+                    <div class="form-group">
+                        <label for="major-landmarks">Major Landmarks:</label>
+                        <input type="text" class="form-control" id="landmarks">
+                    </div>
 
+                    <!-- submit button -->
+                    <button type="submit" class="btn">Add</button>
+                </form>
+
+                <h2>List of Places Visited:</h2>
+                <ul id="list">
+    
+                </ul>
+            </div>
+
+            <div class="col-md-6">
+                <div id="show-place-visited">
+                  <h2></h2>
+              
+                  <p>Name: <span class="place-name"></span></p>
+                  <p>Location: <span class="place-location"></span></p>
+                  <p>Time of Year: <span class="time-of-year"></span></p>
+                  <p>Landmarks: <span class="place-landmarks"></span></p>
+                </div>
+              </div> 
+        </div>
     </div> 
 </body>
 </html>
