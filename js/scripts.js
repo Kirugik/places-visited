@@ -1,5 +1,5 @@
-//business logic 
-function PlaceVisited (name, location, timeOfYear, landmarks, accompaniedBy, notes) {
+//Business logic 
+function PlaceVisited (name, location, timeOfYear, landmarks) {
     this.name = name;
     this.location = location;
     this.timeOfYear = timeOfYear;
@@ -7,7 +7,7 @@ function PlaceVisited (name, location, timeOfYear, landmarks, accompaniedBy, not
 }
 
 PlaceVisited.prototype.placeDetails = function () {
-    return this.name + "" + this.location + "" + this.timeOfYear + "" + this.landmarks;
+    return this.name + " " + this.location + " " + this.timeOfYear + " " + this.landmarks;
 }
 
 
@@ -25,7 +25,7 @@ $(document).ready(function() {
 
         $("ul#list").append ("<li><span class='place'>" + newPlaceVisited.placeDetails() + "</span></li>");
 
-        $(".place").name().click(function() {
+        $(".place").last().click(function() {
             $("#show-place-visited").show();
             $("#show-place-visited h2").text(newPlaceVisited.name);
             $(".place-name").text(newPlaceVisited.name);
@@ -34,10 +34,10 @@ $(document).ready(function() {
             $(".place-landmarks").text(newPlaceVisited.landmarks);
           });
 
-        $("input#new-place-visited").val();
-        $("input#new-place-location").val(); 
-        $("input#time-of-year").val();
-        $("input#landmarks").val();
+        $("input#new-place-visited").val("");
+        $("input#new-place-location").val(""); 
+        $("input#time-of-year").val("");
+        $("input#landmarks").val("");
 
     });
 });
